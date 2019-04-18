@@ -1,5 +1,22 @@
 .campaing
 
+  &--createOrder
+
+    .campaing__wrapper:first-child
+      justify-content: flex-end
+
+    .campaing__btn
+      display: none
+
+    .campaing__breadcrumbs
+      display: inline-block
+
+    .campaing__table
+      display: none
+
+    .campaing-create
+      display: block
+
   &__wrapper
     display: flex
     justify-content: space-between
@@ -25,6 +42,31 @@
 
     &--md
       font-size: 20px
+
+  &__breadcrumbs
+    display: none
+    vertical-align: middle
+    margin-left: 10px
+    padding-left: 20px
+    border-left: 1px solid #E5E5E5
+
+  &__element
+    display: inline-block
+    vertical-align: middle
+    margin-right: 5px
+
+    &:before
+      content: ''
+      width: 5px
+      height: 5px
+      display: inline-block
+      vertical-align: middle
+      margin-right: 5px
+      background: rgba(196, 196, 196, 0.8)
+      border-radius: 50%
+
+    &:last-child
+      margin-right: 0
 
   &__text
     margin-right: 20px
@@ -69,8 +111,9 @@
 
 
   &-create
+    display: none
     background-color: #fff
-    border-bottom: 1px solid #E5E5E5
+    //border-bottom: 1px solid #E5E5E5
 
     &__header
       padding: 30px 30px 25px 50px
