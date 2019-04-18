@@ -1,6 +1,9 @@
 extends /layout/app
 
 block content
+  - var text =
+  - ["User ID", "Admin action", "Status", "A_ID", "Name", "StartDate/EndDate", "Impressions Counter", "Max Impressions", "Current Spend", "Max Spend"]
+
   .container
     .campaing
       .campaing__wrapper
@@ -18,3 +21,6 @@ block content
             span.campaing__val %
           button.btn.btn--pink Change user markup
 
+      .campaing__tabel
+        each value in text
+          span.campaing__text.campaing__text--md #{value}

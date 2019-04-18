@@ -1,11 +1,11 @@
 .campaing
-  background-color: #fff
 
   &__wrapper
     display: flex
     justify-content: space-between
     align-items: center
     padding: 15px 15px 15px 37px
+    background-color: #fff
     border-bottom: 1px solid #E5E5E5
 
   &__icon
@@ -29,6 +29,10 @@
     line-height: normal
     color: #7D829F
 
+    &--md
+      margin: 0 10px
+      font-size: 16px
+
   &__label
     margin-right: 24px
 
@@ -47,7 +51,15 @@
     &::-webkit-inner-spin-button
       appearance: none
 
-    &__val
-      font-size: 15px
-      line-height: normal
-      color: #6D7393
+  &__val
+    font-size: 15px
+    line-height: normal
+    color: #6D7393
+
+  &__tabel
+    display: flex
+    justify-content: space-between
+    margin: 20px
+    padding: 15px 10px
+    background-color: #fff
+
