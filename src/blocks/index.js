@@ -1,5 +1,8 @@
-import './block-example';
+import User from './user';
 
 export default () => {
-  console.log('init blocks');
+  const $user = $('.user');
+  if ($user.length) {
+    new User($user)
+  }
 };

@@ -1,0 +1,60 @@
+.user
+
+  &__item
+    position: relative
+    vertical-align: middle
+    height: 50px
+    width: 50px
+    padding: 5px 5px
+    border: 0 none
+    border-radius: 4px
+    background-color: transparent
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &:hover
+      background-color: rgba(77, 89, 149, 0.06)
+
+    &--info
+      width: auto
+
+  &__notifications
+    position: absolute
+    padding: 0 2.7px
+    background: #FFC13F
+    border: 1px solid transparent
+    border-radius: 2px
+    font-size: 10px
+    line-height: normal
+    color: #fff
+
+    &--new
+      top: 6px
+      right: 3px
+
+    &--unread
+      top: 2px
+      right: 3px
+
+
+  &__icon
+    line-height: 0
+
+  &__name
+    display: inline-block
+    vertical-align: middle
+    margin-right: 8px
+    color: #8f94ac
+
+  &__greeting
+    color: #c4c4c4
+
+  &__logo
+    display: inline-block
+    vertical-align: middle
+    padding: 6px 13px
+    background: rgba(10, 187, 135, 0.2)
+    border-radius: 5px
+    font-size: 24px
+    line-height: normal
+    color: #0ABB87
