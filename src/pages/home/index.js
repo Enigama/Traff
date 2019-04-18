@@ -6,4 +6,7 @@ export default () => {
   $campaing.find('.js-create-order').on('click', () => {
     $campaing.addClass('campaing--createOrder');
   })
+  $campaing.find('.js-change').on('click', () => {
+    $campaing.removeClass('campaing--createOrder');
+  })
 };
