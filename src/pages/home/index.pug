@@ -2,4 +2,19 @@ extends /layout/app
 
 block content
   .container
-    include ../../blocks/user/user.pug
+    .campaing
+      .campaing__wrapper
+        button.btn Create insertion order
+        include ../../blocks/user/user.pug
+      .campaing__wrapper
+        .campaing__desc
+          span.campaing__icon
+            include air.svg
+          span.campaing__title Campaign
+        .campaing__markup
+          span.campaing__text User Markup Rate
+          label.campaing__label
+            input.campaing__input(type='number')
+            span.campaing__val %
+          button.btn.btn--pink Change user markup
+

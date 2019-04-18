@@ -1,4 +1,5 @@
 import User from './user';
+import './btn/btn.sass';
 
 export default () => {
   const $user = $('.user');
