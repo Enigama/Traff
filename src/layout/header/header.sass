@@ -1,0 +1,79 @@
+.header
+  padding: 20px 0
+  background: #1E1E2D
+
+  &__top
+    margin-bottom: 30px
+    padding: 0 20px
+
+  &__burger
+    position: relative
+    width: 25px
+    height: 17px
+    padding: 0
+    background: transparent
+    border: 0 none
+    cursor: pointer
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      display: inline-block
+      width: 100%
+      padding: 1.5px 0
+
+    &:before
+      top: 0
+      right: 0
+      background: rgba(91, 155, 209, 0.7)
+    &:after
+      right: 0
+      bottom: 0
+      background: #5B9BD1
+
+    &:hover,
+    &--active
+      .header__line
+        width: 100%
+
+
+  &__line
+    position: absolute
+    right: 0
+    top: 50%
+    width: 13px
+    height: 3px
+    background: #4066D5
+    transform: translateY(-50%)
+    transition: width 0.3s
+
+  &__item
+    &:hover,
+    &--active
+      background: #1B1B28
+
+      .header__link
+          color: #fff
+      .header__icon
+        path
+          fill: #5D78FF
+
+  &__link
+    display: block
+    padding: 8px 20px
+    color: rgba(255, 255, 255, 0.5)
+    text-decoration: none
+    transition: color 0.3s
+
+  &__icon
+    display: inline-block
+    vertical-align: middle
+    width: 20px
+    margin-right: 17px
+    line-height: 0
+
+  &__name
+    vertical-align: middle
+    font-size: 16px
+    line-height: normal
