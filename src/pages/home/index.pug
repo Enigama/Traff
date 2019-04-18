@@ -7,7 +7,7 @@ block content
   .container
     .campaing
       .campaing__wrapper
-        button.btn Create insertion order
+        button.btn.js-create-order Create insertion order
         include ../../blocks/user/user.pug
       .campaing__wrapper
         .campaing__desc
@@ -21,6 +21,69 @@ block content
             span.campaing__val %
           button.btn.btn--pink Change user markup
 
-      .campaing__tabel
-        each value in text
-          span.campaing__text.campaing__text--md #{value}
+      .campaing__holder
+
+        .campaing__table
+            each value in text
+              span.campaing__text.campaing__text--md #{value}
+
+        .campaing-create
+          .campaing-create__header
+            .campaing-create__title Create New Insertion Order
+
+          .campaing-create__main
+            form.campaing-create__form(action='#' method='POST')
+              .campaing-create__field
+                .campaing-create__text Order Name
+                .campaing-create__label
+                  input.campaing-create__input
+              .campaing-create__field
+                .campaing-create__text Customer Name
+                .campaing-create__label
+                  input.campaing-create__input
+                  .campaing-create__help (Use this field for your own customer reference if any)
+              .campaing-create__field
+                .campaing-create__text Maximum Impressions
+                .campaing-create__label
+                  input.campaing-create__input
+                  .campaing-create__help (Maximum campaign impressions before the bids stop)
+              .campaing-create__field
+                .campaing-create__text Maximum Spend
+                .campaing-create__label
+                  input.campaing-create__input
+                  .campaing-create__help (Maximum campaign $$$ spent before the bids stop)
+
+              .campaing-create__private
+                .campaing-create__item
+                  .campaing-create__title Private Exchange Inventory Feeds
+                  .campaing-create__text [ Default Value for new Line Items ]
+                  .campaing-create__action
+                    button.btn.btn--pink(type="button") Add
+                    button.btn.btn--md(type="button") Remove
+                  textarea.campaing-create__message
+                  .campaing-create__notifications  Statistics Date: LATEST
+
+                .campaing-create__item
+                  .campaing-create__title Platform Connection Inventory Feeds
+                  .campaing-create__text [ Default Value for new Line Items ]
+                  .campaing-create__action
+                    button.btn.btn--pink(type="button") Add
+                    button.btn.btn--md(type="button") Remove
+                  textarea.campaing-create__message
+                  .campaing-create__notifications
+                    | Statistics Date:
+                    span ADD Data Picker
+
+                .campaing-create__item
+                  .campaing-create__title SSP RTB Publisher Inventory Feeds
+                  .campaing-create__text [ Default Value for new Line Items ]
+                  .campaing-create__action
+                    button.btn.btn--pink(type="button") Add
+                    button.btn.btn--md(type="button") Remove
+                  textarea.campaing-create__message
+                  .campaing-create__notifications
+                    | Statistics Date:
+                    span ADD Data Picker
+
+          .campaing-create__footer
+            buttn.btn.btn--success Start campaign

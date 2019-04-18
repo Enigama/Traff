@@ -23,15 +23,14 @@
     line-height: normal
     color: #464457
 
+    &--md
+      font-size: 20px
+
   &__text
     margin-right: 20px
     font-size: 15px
     line-height: normal
     color: #7D829F
-
-    &--md
-      margin: 0 10px
-      font-size: 16px
 
   &__label
     margin-right: 24px
@@ -51,15 +50,78 @@
     &::-webkit-inner-spin-button
       appearance: none
 
+    &--md
+      max-width: 466px
+
   &__val
     font-size: 15px
     line-height: normal
     color: #6D7393
 
-  &__tabel
+  &__holder
+    margin: 20px
+
+  &__table
     display: flex
     justify-content: space-between
-    margin: 20px
     padding: 15px 10px
     background-color: #fff
+
+
+  &-create
+    background-color: #fff
+    border-bottom: 1px solid #E5E5E5
+
+    &__header
+      padding: 30px 30px 25px 50px
+      border-bottom: 1px solid #E5E5E5
+
+    &__title
+      vertical-align: middle
+      font-size: 20px
+      font-weight: $font-weight-bold
+      line-height: normal
+      color: #464457
+
+    &__main
+      padding: 30px 30px 25px 50px
+
+    &__field
+      margin-bottom: 20px
+
+    &__text
+      margin-bottom: 13px
+      font-size: 16px
+      line-height: normal
+      color: #7D829F
+
+    &__label
+      max-width: 466px
+
+    &__input
+      width: 100%
+      margin-bottom: 5px
+      padding: 12px 25px 12px 12px
+      border: 1px solid #E5E5E5
+      border-radius: 5px
+
+    &__help
+      font-size: 16px
+      line-height: normal
+      color: #5B9BD1
+
+    &__action
+      margin-bottom: 20px
+
+    &__message
+      width: 490px
+      height: 110px
+      padding: 15px
+      border: 1px solid rgba(196, 196, 196, 0.8)
+      resize: none
+
+    &__footer
+      padding: 40px 50px
+      border-top: 1px solid #E5E5E5
+
 
