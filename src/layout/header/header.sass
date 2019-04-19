@@ -6,6 +6,15 @@
   background: #1E1E2D
   transition: flex-basis 0.3s
 
+  +media-992
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    min-height: auto
+    height: 80px
+    z-index: 10
+
   &--small
     flex-basis: 70px
 
@@ -26,6 +35,10 @@
 
     .header__burger
       margin: 0 auto
+
+  &--mobile
+    .header__menu
+      transform: translateX(0)
 
   &__top
     display: flex
@@ -74,6 +87,17 @@
     background: #4066D5
     transform: translateY(-50%)
     transition: width 0.3s
+
+  &__menu
+    +media-992
+      position: absolute
+      right: 0
+      top: 80px
+      bottom: 0
+      height: 100vh
+      background-color: #1E1E2D
+      transform: translateX(101%)
+      transition: transform 0.3s
 
   &__item
     background-color: transparent
