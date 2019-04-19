@@ -35,6 +35,9 @@
       flex-direction: column
       align-items: flex-start
 
+    +media-640
+      padding: 15px
+
   &__icon
     display: inline-block
     vertical-align: middle
@@ -53,12 +56,23 @@
     &--md
       font-size: 20px
 
+  &__desc
+    +media-480
+      margin-bottom: 10px
+
   &__breadcrumbs
     display: none
     vertical-align: middle
     margin-left: 10px
     padding-left: 20px
     border-left: 1px solid #E5E5E5
+
+    +media-480
+      display: block
+      margin-top: 10px
+      margin-left: 0
+      padding-left: 0
+      border-left: 0
 
   &__element
     display: inline-block
@@ -84,8 +98,16 @@
     line-height: normal
     color: #7D829F
 
+    +media-480
+      display: block
+      margin-bottom: 10px
+
   &__label
     margin-right: 24px
+
+    +media-480
+      display: block
+      margin-bottom: 10px
 
   &__input
     width: 70px
@@ -134,6 +156,9 @@
       padding: 30px 30px 25px 50px
       border-bottom: 1px solid #E5E5E5
 
+      +media-640
+        padding: 15px
+
     &__title
       vertical-align: middle
       font-size: 20px
@@ -141,8 +166,14 @@
       line-height: normal
       color: #464457
 
+      +media-640
+        font-size: 18px
+
     &__main
       padding: 30px 30px 25px 50px
+
+      +media-640
+        padding: 15px
 
     &__field
       margin-bottom: 20px
@@ -177,6 +208,9 @@
       padding: 15px
       border: 1px solid rgba(196, 196, 196, 0.8)
       resize: none
+
+      +media-640
+        width: 100%
 
     &__footer
       padding: 40px 50px
