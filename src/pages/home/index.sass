@@ -11,6 +11,12 @@
     .campaing__breadcrumbs
       display: inline-block
 
+    .campaing__markup
+      display: none
+
+    .campaing__backList
+      display: block
+
     .campaing__table
       display: none
 
@@ -100,6 +106,9 @@
     line-height: normal
     color: #6D7393
 
+  &__backList
+    display: none
+
   &__holder
     margin: 20px
 
@@ -109,6 +118,8 @@
     padding: 15px 10px
     background-color: #fff
 
+    +media-1200
+      flex-direction: column
 
   &-create
     display: none
