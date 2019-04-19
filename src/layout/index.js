@@ -5,5 +5,5 @@ import './footer';
 
 export default () => {
   console.log('init layout');
-  header();
+  new header();
 };
