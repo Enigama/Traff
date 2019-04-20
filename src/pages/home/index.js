@@ -2,11 +2,11 @@ import './index.sass';
 import './index.pug';
 
 export default () => {
-  const $campaing = $('.campaing')
-  $campaing.find('.js-create-order').on('click', () => {
-    $campaing.addClass('campaing--createOrder');
+  const $template = $('.template')
+  $template.find('.js-create-order').on('click', () => {
+    $template.addClass('template--createOrder');
   })
-  $campaing.find('.js-change').on('click', () => {
-    $campaing.removeClass('campaing--createOrder');
+  $template.find('.js-change').on('click', () => {
+    $template.removeClass('template--createOrder');
   })
 };

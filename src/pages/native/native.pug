@@ -1,0 +1,109 @@
+extends /layout/app
+
+block content
+	- var thead = ["Name", "Description", "Media Type", "View/Edit", "Date Created", "Date Updated"]
+
+	.container
+		.template
+			.template__wrapper
+				button.btn.template__btn.js-create-id Create native id
+				include ../../blocks/user/user.pug
+			.template__wrapper
+				.template__desc
+					span.template__icon
+						include pazle.svg
+					span.template__title Native id
+					ul.template__breadcrumbs
+						li.template__element Campaign
+						li.template__element Create New Insertion Order
+				.template__markup
+					span.template__text Search for Media
+					label.template__label
+						input.template__input.template__input--lg(type='number')
+					button.btn.btn--pink Go
+				.template__backList
+					button.btn.btn--warning.js-change  Back to list
+
+			.template__holder
+
+				.template__table
+					.template__head
+						.template__row
+							each value in thead
+								.template__col
+									span.template__text.template__text--md #{value}
+					.template__row
+						.template__col.template__col--value
+							span.template__text.template__text--md banneryahoo
+						.template__col.template__col--value
+							span.template__text.template__text--md test
+						.template__col.template__col--value
+							span.template__text.template__text--md image
+						.template__col.template__col--value
+							button.btn Edit
+						.template__col.template__col--value
+							span.template__text.template__text--md 04/10/19 1:04 PM
+						.template__col.template__col--value
+							span.template__text.template__text--md 04/10/19 3:04 PM
+
+
+				.template-create
+					.template-create__header
+						.template-create__title Create New Insertion Order
+
+					.template-create__main
+						form.template-create__form(action='#' method='POST')
+							.template-create__field
+								.template-create__text Order Name
+								.template-create__label
+									input.template-create__input
+							.template-create__field
+								.template-create__text Customer Name
+								.template-create__label
+									input.template-create__input
+									.template-create__help (Use this field for your own customer reference if any)
+							.template-create__field
+								.template-create__text Maximum Impressions
+								.template-create__label
+									input.template-create__input
+									.template-create__help (Maximum campaign impressions before the bids stop)
+							.template-create__field
+								.template-create__text Maximum Spend
+								.template-create__label
+									input.template-create__input
+									.template-create__help (Maximum campaign $$$ spent before the bids stop)
+
+							.template-create__private
+								.template-create__item
+									.template-create__title Private Exchange Inventory Feeds
+									.template-create__text [ Default Value for new Line Items ]
+									.template-create__action
+										button.btn.btn--pink(type="button") Add
+										button.btn.btn--md(type="button") Remove
+									textarea.template-create__message
+									.template-create__notifications  Statistics Date: LATEST
+
+								.template-create__item
+									.template-create__title Platform Connection Inventory Feeds
+									.template-create__text [ Default Value for new Line Items ]
+									.template-create__action
+										button.btn.btn--pink(type="button") Add
+										button.btn.btn--md(type="button") Remove
+									textarea.template-create__message
+									.template-create__notifications
+										| Statistics Date:
+										span ADD Data Picker
+
+								.template-create__item
+									.template-create__title SSP RTB Publisher Inventory Feeds
+									.template-create__text [ Default Value for new Line Items ]
+									.template-create__action
+										button.btn.btn--pink(type="button") Add
+										button.btn.btn--md(type="button") Remove
+									textarea.template-create__message
+									.template-create__notifications
+										| Statistics Date:
+										span ADD Data Picker
+
+					.template-create__footer
+						buttn.btn.btn--success(type='button') Start campaign

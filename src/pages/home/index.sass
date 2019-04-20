@@ -1,26 +1,26 @@
-.campaing
+.template
 
   &--createOrder
 
-    .campaing__wrapper:first-child
+    .template__wrapper:first-child
       justify-content: flex-end
 
-    .campaing__btn
+    .template__btn
       display: none
 
-    .campaing__breadcrumbs
+    .template__breadcrumbs
       display: inline-block
 
-    .campaing__markup
+    .template__markup
       display: none
 
-    .campaing__backList
+    .template__backList
       display: block
 
-    .campaing__table
+    .template__table
       display: none
 
-    .campaing-create
+    .template-create
       display: block
 
   &__wrapper
@@ -98,6 +98,9 @@
     line-height: normal
     color: #7D829F
 
+    &--md
+      margin-right: 0
+
     +media-480
       display: block
       margin-bottom: 10px
@@ -139,13 +142,38 @@
     margin: 20px
 
   &__table
-    display: flex
-    justify-content: space-between
-    padding: 15px 10px
+    //display: flex
+    //justify-content: space-between
+    padding: 15px 0 //plpr 10px
     background-color: #fff
 
     +media-1200
       flex-direction: column
+
+  &__head
+    margin-bottom: 15px
+    padding-bottom: 14px
+    border-bottom: 1px solid #E5E5E5
+
+  &__row
+    display: flex
+
+  &__col
+    flex-basis: 300px
+    text-align: center
+    align-self: center
+
+    &--value
+      height: 37px
+      padding: 0 10px
+      border-right: 1px solid #E5E5E5
+      line-height: 37px
+
+      &:first-child
+        border-left: 0
+
+      &:last-child
+        border-right: 0
 
   &-create
     display: none
