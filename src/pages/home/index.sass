@@ -1,6 +1,6 @@
 .template
 
-  &--createOrder
+  &--create
 
     .template__wrapper:first-child
       justify-content: flex-end
@@ -108,6 +108,9 @@
   &__label
     margin-right: 24px
 
+    //&--lg
+    //  max-width: 466px
+
     +media-480
       display: block
       margin-bottom: 10px
@@ -126,6 +129,13 @@
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button
       appearance: none
+
+    &::placeholder
+      color: #D0D0D0
+      opacity: 0.2
+
+    &--lg
+      width: 264px
 
     &--md
       max-width: 466px
@@ -198,10 +208,33 @@
         font-size: 18px
 
     &__main
+      display: flex
       padding: 30px 30px 25px 50px
 
       +media-640
         padding: 15px
+
+      +media-480
+        flex-direction: column-reverse
+
+    &__left
+      flex-shrink: 0
+      flex-basis: 36.8% //570px
+
+    &__right
+      padding: 0 160px
+
+      +media-1200
+        padding: 0 100px
+
+      +media-768
+        padding: 0 80px
+
+      +media-640
+        padding: 0 50px
+
+      +media-480
+        margin-bottom: 20px
 
     &__field
       margin-bottom: 20px
@@ -215,12 +248,84 @@
     &__label
       max-width: 466px
 
+      &--lg
+        max-width: 100%
+
+      &--md
+        max-width: 218px
+
+      &--multi
+        display: flex
+        justify-content: space-between
+        max-width: 285px
+
+        .template-create__select
+          flex-basis: 218px
+
+      select
+        display: none
+
+    &__select
+      cursor: pointer
+
+      &.opened
+        .jq-selectbox__trigger-arrow
+          transform: rotate(180deg)
+
+      .jq-selectbox__select
+        position: relative
+        margin-bottom: 5px
+        padding: 9px 20px
+        border: 1px solid #E5E5E5
+        border-radius: 5px
+
+      .jq-selectbox__trigger
+        position: absolute
+        right: 20px
+        top: 50%
+        transform: translateY(-50%)
+
+      .jq-selectbox__trigger-arrow
+        width: 15px
+        height: 15px
+        background-size: contain
+        background: url("../arrow.svg") no-repeat center;
+
+      .jq-selectbox__dropdown
+        padding: 9px 20px
+        border: 1px solid #E5E5E5
+        border-radius: 5px
+
+        li
+          color: #6D7393
+
+      .jq-selectbox__select-text
+        font-family: $font-family-base
+        font-size: 14px
+        line-height: normal
+        color: #6D7393
+
+    &__add
+      align-self: flex-start
+
     &__input
       width: 100%
       margin-bottom: 5px
       padding: 12px 25px 12px 12px
       border: 1px solid #E5E5E5
       border-radius: 5px
+
+      &--lg
+        width: 264px
+
+      &--md
+        max-width: 466px
+
+      &--sm
+        max-width: 373px
+
+      &--xs
+        max-width: 192px
 
     &__help
       font-size: 16px
@@ -239,6 +344,13 @@
 
       +media-640
         width: 100%
+
+    &__preview
+      margin-bottom: 9px
+      font-weight: $font-weight-bold
+      font-size: 18px
+      color: #464457
+      text-align: center
 
     &__footer
       padding: 40px 50px
