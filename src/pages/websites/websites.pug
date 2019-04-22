@@ -1,0 +1,71 @@
+extends /layout/app
+
+block content
+	- var text =
+	- ["#", "Domain", "Platform Connection", "Domain Markup", "Imps Loss Rate", "Domain Owner", "Created", "Updated", "Approval", "Actions"]
+
+	.container
+		.template
+			.template__wrapper
+				button.btn.template__btn.js-create(data-type="Domain") Create new domain
+				include ../../blocks/user/user.pug
+			.template__wrapper
+				.template__desc
+					span.template__icon
+						//include air.svg
+					span.template__title Websites
+					ul.template__breadcrumbs
+						li.template__element Websites
+						li.template__element Create New Domain
+				.template__markups
+					.template__markup
+						span.template__text Publisher Impressions Network Loss Rate
+						label.template__label
+							input.template__input(type='number')
+							span.template__val %
+						button.btn.btn--pink Change network loss rate
+					.template__markup
+						span.template__text Publisher Markup Rate
+						label.template__label
+							input.template__input(type='number')
+							span.template__val %
+						button.btn.btn--warning Change publisher markup
+					.template__backList
+						button.btn.btn--warning.js-change  Back to list
+
+			.template__holder
+
+				.template__table
+					.template__row
+						each value in text
+							.template__col
+								span.template__text.template__text--md #{value}
+
+				.template-create
+					.template-create__header
+						.template-create__title Create New Domain
+
+					.template-create__main
+						form.template-create__form(action='#' method='POST')
+							.template-create__field
+								.template-create__text Web Domain
+								.template-create__label
+									input.template-create__input
+							.template-create__field
+								.template-create__text IABCategory
+								.template-create__label.template-create__label--multi
+									select.template-create__select
+										option Image
+										option Test 1
+										option Test 2
+							.template-create__private
+								.template-create__item.template-create__item--bot
+									.template-create__text Description
+									textarea.template-create__message
+
+								.template-create__item
+									span.template-create__text.template-create__text--inline Platform Connection
+									input.template-create__checkbox(type='checkbox')
+
+					.template-create__footer
+						buttn.btn.btn--success(type='button') Create New Domain

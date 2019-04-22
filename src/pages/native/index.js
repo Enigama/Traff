@@ -1,6 +1,5 @@
 import './native.pug';
 import './index.sass';
-import 'jquery-form-styler/dist/jquery.formstyler.min';
 // import 'jquery-form-styler/dist/jquery.formstyler.css';
 
 export default class Native {

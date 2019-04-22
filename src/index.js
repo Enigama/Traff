@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import 'jquery-form-styler/dist/jquery.formstyler.min';
+
 
 // Uncomment for use BOOTSTAP4
 // window.Popper = require('popper.js').default;

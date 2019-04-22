@@ -1,6 +1,7 @@
 import './404';
 import initHome from './home';
 import Native from './native';
+import websites from './websites';
 
 export default () => {
   initHome();
@@ -9,4 +10,5 @@ export default () => {
   if (title === 'Native id') {
     new Native($root);
   }
+  websites($root);
 };

@@ -92,6 +92,15 @@
     &:last-child
       margin-right: 0
 
+  &__markup
+    display: inline-block
+
+    &:first-child
+      margin-right: 50px
+
+    &:last-child
+      margin-right: 0
+
   &__text
     margin-right: 20px
     font-size: 15px
@@ -100,6 +109,7 @@
 
     &--md
       margin-right: 0
+
 
     +media-480
       display: block
@@ -178,6 +188,7 @@
       padding: 0 10px
       border-right: 1px solid #E5E5E5
       line-height: 37px
+      white-space: nowrap
 
       &:first-child
         border-left: 0
@@ -245,6 +256,9 @@
       line-height: normal
       color: #7D829F
 
+      &--inline
+        margin-right: 15px
+
     &__label
       max-width: 466px
 
@@ -289,7 +303,7 @@
         width: 15px
         height: 15px
         background-size: contain
-        background: url("../arrow.svg") no-repeat center;
+        background: url("../arrow.svg") no-repeat center
 
       .jq-selectbox__dropdown
         padding: 9px 20px
@@ -307,6 +321,28 @@
 
     &__add
       align-self: flex-start
+
+    &__item
+      &--bot
+        margin-bottom: 20px
+
+      .jq-checkbox
+        input
+          display: none
+
+    &__checkbox
+      display: inline-block
+      vertical-align: middle
+      width: 25px
+      height: 25px
+      border: 1px solid #E5E5E5
+      border-radius: 5px
+
+      &.checked
+        &:before
+          content: '✓'
+          display: block
+          text-align: center
 
     &__input
       width: 100%
